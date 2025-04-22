@@ -11,7 +11,7 @@ function Contatos() {
     emailjs
       .sendForm(
         'service_5zbqcpm', // Substitua pelo seu Service ID do EmailJS
-        'template_d49etu6', // Substitua pelo seu Template ID do EmailJS
+        'template_8gduobm', // Substitua pelo seu Template ID do EmailJS
         form.current,
         'DxQotlybQPBPqHG9E' // Substitua pela sua API Key do EmailJS
       )
