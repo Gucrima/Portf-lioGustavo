@@ -119,11 +119,13 @@
 }
 
 .modal-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* Arredonda as bordas da imagem */
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para a imagem */
+  width: 100%; /* A imagem ocupa toda a largura disponível */
+  max-width: 400px; /* Define um tamanho máximo para a largura */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem inteira seja exibida sem cortes */
+  border-radius: 10px; /* Bordas arredondadas para um visual mais agradável */
+  margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar a imagem */
 }
 
 .modal-content h2 {
