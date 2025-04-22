@@ -119,7 +119,7 @@
 }
 
 .modal-image {
-  width: 100%; /* A imagem ocupa toda a largura disponível */
+  width: 80%; /* A imagem ocupa toda a largura disponível */
   max-width: 400px; /* Define um tamanho máximo para a largura */
   height: auto; /* Mantém a proporção da imagem */
   object-fit: contain; /* Garante que a imagem inteira seja exibida sem cortes */
