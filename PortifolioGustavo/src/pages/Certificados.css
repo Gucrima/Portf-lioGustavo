@@ -1,0 +1,172 @@
+/* Contêiner principal */
+.certificados-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.certificados-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #2A9D8F;
+  margin-bottom: 10px;
+}
+
+/* Filtro */
+.certificados-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.filter-button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #2A9D8F;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #2A9D8F;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #2A9D8F;
+  color: #ffffff;
+}
+
+.filter-button.active {
+  background-color: #2A9D8F;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Grid de certificados */
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Máximo de 3 por linha */
+  gap: 20px; /* Espaçamento entre os cards */
+  margin-top: 20px;
+  justify-content: center; /* Centraliza os cards no grid */
+}
+
+/* Card de certificado */
+.certificado-card {
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 500px; /* Define um tamanho máximo para os cards */
+  width: 100%; /* Garante que o card ocupe toda a largura disponível até o limite do max-width */
+  margin: 0 auto; /* Centraliza os cards no grid */
+}
+
+.certificado-card:hover {
+  transform: scale(1.02); /* Reduzido para evitar aumento exagerado */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagem do certificado */
+.certificado-image {
+  width: 100%; /* A imagem ocupa toda a largura do card */
+  height: 200px; /* Define uma altura fixa para os cards */
+  object-fit: contain; /* Garante que a imagem inteira seja exibida sem cortes */
+  background-color: #ffffff; /* Adiciona um fundo branco para imagens menores */
+  border-bottom: 2px solid #2A9D8F; /* Linha decorativa abaixo da imagem */
+}
+
+/* Título do certificado */
+.certificado-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #264653;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff; /* Fundo branco para contraste */
+  padding: 30px;
+  border-radius: 15px; /* Bordas arredondadas */
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  animation: fadeIn 0.3s ease-in-out; /* Animação de entrada */
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Arredonda as bordas da imagem */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para a imagem */
+}
+
+.modal-content h2 {
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-size: 1.8rem;
+  color: #264653; /* Cor que combina com o tema */
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #6c757d; /* Cor suave para o texto */
+  line-height: 1.6;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  left: 15px; /* Move o botão para o lado esquerdo */
+  font-size: 2.2rem;
+  width: 40px; /* Largura do botão */
+  background-color: #2A9D8F;
+  color: #264653;
+  border-radius: 200px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #2A9D8F; /* Cor de destaque ao passar o mouse */
+  background-color: #264653;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

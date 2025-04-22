@@ -1,6 +1,6 @@
 .navbar {
-  background-color: #6f4c04;
-  padding: 1rem;
+  background-color: #2A9D8F;
+  padding: 25px;
   position: relative;
 }
 
@@ -10,7 +10,12 @@
   justify-content: space-around;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; /* Permitir que os itens se ajustem em várias linhas, se necessário */
+  flex-wrap: wrap;
+  transition: max-height 0.3s ease;
+}
+
+.navbar-list.open {
+  display: flex;
 }
 
 .navbar-item {
@@ -18,48 +23,107 @@
 }
 
 .navbar-link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem; /* Adicionando padding para espaçamento */
-  transition: color 0.3s ease, transform 0.3s ease; /* Adicionando transição para cor e transformação */
-  white-space: nowrap; /* Impedir quebra de linha */
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  position: relative;
 }
 
-.navbar-link:hover {
-  color: #d0af92; /* Cor ao passar o mouse */
-  transform: translateX(5px); /* Move o link 5px para a direita */
+.navbar-link:hover{
+  color: #264653; /* Cor do texto no hover ou quando ativo */
+  transform: translateX(5px);
 }
 
+/* Adiciona o efeito de hover à barra */
+.navbar-link:hover + .stripe,
+.navbar-link:focus + .stripe,
+.navbar-link.active + .stripe {
+  background: #264653; /* Cor da barra no hover ou ativo */
+}
+
+/* A barra deve seguir o link selecionado */
 .stripe {
-  height: 10px;
-  background: #d0af92;
+  height: 4px;
+  background: #264653; /* Cor da barra */
   position: absolute;
   bottom: 0;
-  transition: left 0.5s, width 0.9s; /* Adicionando transição para a largura */
+  transition: left 0.5s ease, width 0.5s ease;
+}
+
+/* Botão de menu para dispositivos móveis */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-text {
+  display: none; /* Esconde a palavra "Menu" por padrão */
+  margin-top: 2%;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Título para dispositivos móveis */
+.mobile-title {
+  display: none; /* Escondido por padrão */
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-top: 7px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
+  .menu-toggle {
+    display: block;
   }
 
   .navbar-list {
-    justify-content: space-around; /* Ajustar a distribuição dos itens */
-    flex-wrap: wrap; /* Permitir que os itens se ajustem em várias linhas */
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 3%;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-list.open {
+    max-height: 300px; /* Altura máxima para exibir o menu */
   }
 
   .navbar-item {
-    margin-bottom: 0; /* Remover margem inferior */
+    margin-bottom: 1rem;
   }
 
   .navbar-link {
     font-size: 1.2rem;
-    padding: 0.5rem 1rem; /* Adicionando padding para espaçamento */
   }
 
   .stripe {
-    display: block; /* Manter a barra de animação visível em dispositivos móveis */
+    display: none; /* Esconde a barra em dispositivos móveis */
+  }
+
+  .menu-text {
+    display: inline; /* Exibe a palavra "Menu" apenas em dispositivos móveis */
+  }
+
+  .mobile-title {
+    display: inline-block; /* Exibe o título em telas menores */
   }
 }

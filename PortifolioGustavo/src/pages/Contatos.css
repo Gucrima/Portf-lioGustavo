@@ -1,0 +1,159 @@
+/* Contêiner principal */
+.contatos-container {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #264653;
+  background-color: #f4f4f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* Título */
+.contatos-title {
+  font-size: 2.5rem;
+  color: #2A9D8F;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+.contatos-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #6c757d;
+}
+
+/* Formulário */
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contato-input,
+.contato-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #2A9D8F;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contato-input:focus,
+.contato-textarea:focus {
+  border-color: #21867a;
+}
+
+.contato-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #2A9D8F;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contato-button:hover {
+  background-color: #21867a;
+  transform: scale(1.05);
+}
+
+/* Redes Sociais */
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  color: #2A9D8F;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #21867a;
+}
+
+.social-link i {
+  margin-right: 8px;
+}
+
+/* Responsividade para tablets e dispositivos menores */
+@media (max-width: 768px) {
+  .contatos-container {
+    padding: 15px; /* Reduz o padding para telas menores */
+    max-width: 95%; /* O contêiner ocupa quase toda a largura da tela */
+    margin: 20px auto; /* Ajusta o espaçamento vertical */
+  }
+
+  .contatos-title {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .contatos-description {
+    font-size: 1rem; /* Reduz o tamanho da descrição */
+  }
+
+  .contato-form {
+    gap: 10px; /* Reduz o espaçamento entre os campos */
+  }
+
+  .contato-input,
+  .contato-textarea {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos campos */
+    padding: 8px; /* Ajusta o padding dos campos */
+  }
+
+  .contato-button {
+    font-size: 0.9rem; /* Reduz o tamanho do botão */
+    padding: 8px 15px; /* Ajusta o padding do botão */
+  }
+
+  .redes-sociais {
+    flex-direction: column; /* Alinha os links verticalmente */
+    gap: 15px; /* Ajusta o espaçamento entre os links */
+  }
+
+  .social-link {
+    font-size: 1rem; /* Reduz o tamanho dos links */
+  }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+  .contatos-container {
+    padding: 10px; /* Reduz ainda mais o padding */
+  }
+
+  .contatos-title {
+    font-size: 1.8rem; /* Ajusta o tamanho do título */
+  }
+
+  .contatos-description {
+    font-size: 0.9rem; /* Ajusta o tamanho da descrição */
+  }
+
+  .contato-input,
+  .contato-textarea {
+    font-size: 0.8rem; /* Ajusta o tamanho da fonte dos campos */
+    padding: 6px; /* Ajusta o padding dos campos */
+  }
+
+  .contato-button {
+    font-size: 0.8rem; /* Ajusta o tamanho do botão */
+    padding: 6px 10px; /* Ajusta o padding do botão */
+  }
+
+  .social-link {
+    font-size: 0.9rem; /* Ajusta o tamanho dos links */
+  }
+}

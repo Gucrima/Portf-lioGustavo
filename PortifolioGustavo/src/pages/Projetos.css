@@ -1,0 +1,164 @@
+/* Contêiner principal */
+.projetos-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.projetos-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #2A9D8F;
+  margin-bottom: 20px;
+}
+
+/* Filtro */
+.projetos-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.filter-button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #2A9D8F;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #2A9D8F;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #2A9D8F;
+  color: #ffffff;
+}
+
+.filter-button.active {
+  background-color: #2A9D8F;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Grid de projetos */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Card de projeto */
+.projeto-card {
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projeto-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.projeto-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-bottom: 2px solid #2A9D8F;
+}
+
+.projeto-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #264653;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button2 {
+    position: absolute;
+    top: 20px;
+    right: 15px; /* Move o botão para o lado esquerdo */
+    font-size: 2.2rem;
+    width: 40px; /* Largura do botão */
+    background-color: #2A9D8F;
+    color: #264653;
+    border-radius: 200px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close-button2:hover {
+  color: #2A9D8F;
+  background-color: #264653;
+}
+
+/* Botão do repositório */
+.repository-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #2A9D8F;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.repository-button:hover {
+  background-color: #21867a;
+  transform: scale(1.05);
+}

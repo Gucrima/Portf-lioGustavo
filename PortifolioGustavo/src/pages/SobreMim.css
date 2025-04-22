@@ -1,0 +1,181 @@
+/* Contêiner principal */
+.conteiner-sobre-mim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #f4f4f9; /* Cor de fundo suave */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+}
+
+/* Carrossel */
+.carrocel-fotos-minhas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 30%;
+  max-width: 300px;
+  margin: 20px auto;
+  overflow: hidden; /* Garante que apenas a imagem ativa seja visível */
+  border-radius: 10px; /* Arredonda as bordas do carrossel */
+}
+
+.carrocel-fotos-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 350px; /* Altura fixa para o carrossel */
+  position: relative;
+}
+
+.carrocel-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animação suave */
+  opacity: 0; /* Imagens não ativas são invisíveis */
+  position: absolute; /* Todas as imagens ficam sobrepostas */
+}
+
+.carrocel-foto.active {
+  opacity: 1; /* A imagem ativa é visível */
+  transform: scale(1); /* A imagem ativa aparece em tamanho normal */
+  z-index: 2; /* Garante que a imagem ativa fique acima das outras */
+}
+
+/* Botões do carrossel */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Garante que os botões fiquem acima das imagens */
+  transition: background-color 0.3s ease;
+}
+
+.prev-button {
+  left: 15px;
+}
+
+.next-button {
+  right: 15px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Texto */
+.texto-sobre-mim {
+  font-family: 'Poppins', sans-serif; /* Fonte moderna e elegante */
+  font-size: 1.2rem; /* Tamanho de texto legível */
+  line-height: 1.8; /* Espaçamento entre linhas para melhorar a leitura */
+  color: #264653; /* Cor que combina com o tema do portfólio */
+  text-align: justify; /* Justifica o texto para um visual mais profissional */
+  margin-top: 20px;
+}
+
+.texto-sobre-mim h1 {
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-size: 2.5rem; /* Destaque para o título */
+  color: #2A9D8F; /* Cor que combina com o tema */
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+  letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.texto-sobre-mim strong {
+  color: #2A9D8F; /* Destaque para palavras importantes */
+  font-weight: bold; /* Negrito para ênfase */
+}
+
+.texto-sobre-mim ul {
+  margin-top: 10px;
+  padding-left: 20px; /* Recuo para listas */
+}
+
+.texto-sobre-mim ul li {
+  margin-bottom: 10px;
+  list-style-type: disc; /* Marcador de lista */
+}
+
+/* Responsividade para tablets e dispositivos menores */
+@media (max-width: 768px) {
+  .conteiner-sobre-mim {
+    width: 95%; /* Aumenta a largura para ocupar quase toda a tela */
+    padding: 20px; /* Reduz o padding para telas menores */
+  }
+
+  .carrocel-fotos-minhas {
+    width: 100%; /* O carrossel ocupa toda a largura disponível */
+    max-width: 100%; /* Remove o limite de largura */
+  }
+
+  .carrocel-fotos-container {
+    height: 250px; /* Reduz a altura do carrossel */
+  }
+
+  .prev-button,
+  .next-button {
+    width: 40px; /* Reduz o tamanho dos botões */
+    height: 40px;
+    font-size: 2rem; /* Ajusta o tamanho da fonte dos botões */
+  }
+
+  .texto-sobre-mim {
+    font-size: 1rem; /* Reduz o tamanho da fonte para melhorar a leitura */
+    line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+  }
+
+  .texto-sobre-mim h1 {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+  .conteiner-sobre-mim {
+    padding: 15px; /* Reduz ainda mais o padding */
+  }
+
+  .carrocel-fotos-container {
+    height: 400px; /* Reduz ainda mais a altura do carrossel */
+  }
+
+  .prev-button,
+  .next-button {
+    width: 30px; /* Reduz ainda mais o tamanho dos botões */
+    height: 30px;
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte dos botões */
+  }
+
+  .texto-sobre-mim {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte para telas muito pequenas */
+  }
+
+  .texto-sobre-mim h1 {
+    font-size: 1.5rem; /* Ajusta o tamanho do título */
+  }
+}
