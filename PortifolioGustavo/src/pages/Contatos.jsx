@@ -88,12 +88,6 @@ function Contatos() {
         >
           <i className="fas fa-envelope"></i> Email
         </a>
-        <a
-          href="https://www.instagram.com/gustavo.sfranco/"
-          className="social-link"
-        >
-          <i className="fas fa-envelope"></i> Instagram
-        </a>
       </div>
     </div>
   );
