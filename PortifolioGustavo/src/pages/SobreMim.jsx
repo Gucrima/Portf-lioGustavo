@@ -8,6 +8,9 @@ function SobreMim() {
     './Images/foto3.png', // Substitua pelos caminhos das suas fotos
     './Images/foto2.png',
     './Images/foto1.png',
+    './Images/foto-4.jpg',
+    './Images/foto-5.webp',
+    './Images/foto-6.jpg',
   ];
 
   const handleNext = () => {

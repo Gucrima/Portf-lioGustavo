@@ -27,6 +27,13 @@ function Certificados() {
       description: 'Certificado de qualificação em assistente de programador e modelador de sistemas',
       type: 'Qualificação',
     },
+     {
+      id: 4,
+      image: './Images/certificado4.png',
+      title: 'Certificado de Qualificação',
+      description: 'Certificado de participação da SIMPEX 25',
+      type: 'Participação',
+    },
   ];
 
   const handleCardClick = (certificado) => {
