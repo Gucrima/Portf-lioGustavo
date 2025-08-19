@@ -34,6 +34,13 @@ function Certificados() {
       description: 'Certificado de participação da SIMPEX 25',
       type: 'Participação',
     },
+    {
+      id: 5,
+      image: './Images/certificado5.png',
+      title: 'Certificado de Qualificação',
+      description: 'Certificado de assistente de programador Back End',
+      type: 'Qualificação',
+    },
   ];
 
   const handleCardClick = (certificado) => {

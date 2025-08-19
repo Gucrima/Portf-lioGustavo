@@ -5,7 +5,8 @@ function SobreMim() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const photos = [
-    './Images/foto3.png', // Substitua pelos caminhos das suas fotos
+    './Images/foto-perfil-2.jpg',
+    './Images/foto3.png', 
     './Images/foto2.png',
     './Images/foto1.png',
     './Images/foto-4.jpg',
@@ -55,7 +56,7 @@ function SobreMim() {
           </p>
           <p>Tenho conhecimentos nas seguintes tecnologias e ferramentas:</p>
           <ul>
-            <li><strong>Linguagens e frameworks:</strong> JavaScript, HTML, CSS, React.js, C#.NET</li>
+            <li><strong>Linguagens e frameworks:</strong> JavaScript, HTML, CSS, React </li>
             <li><strong>Banco de dados:</strong> PostgreSQL</li>
             <li><strong>Metodologias e organização:</strong> Scrum, Trello</li>
           </ul>
@@ -66,7 +67,7 @@ function SobreMim() {
             Atualmente, busco oportunidades para aplicar meus conhecimentos, aprender com profissionais experientes e colaborar em projetos desafiadores e inovadores. Sou uma pessoa <strong>comprometida</strong>, <strong>curiosa</strong>, de aprendizado rápido e sempre pronta para novos desafios.
           </p>
           <p>
-            Estou aberto a <strong>vagas de estágio</strong>, posições <strong>júnior</strong> e conexões com pessoas da área.
+            Estou aberto a <strong>vagas de estágio</strong>, e conexões com pessoas da área.
           </p>
         </div>
       </div>
